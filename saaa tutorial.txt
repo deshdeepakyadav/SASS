@@ -1,0 +1,61 @@
+SAAS Tutorial
+---------------
+
+Installation of SASS:
+----------------------
+
+System Requirements for SASS:
+------------------------------
+Operating System : Cross-platform
+Browser Support : IE (Internet Explorer 8+), Firefox, Google Chrome, Safari, Opera
+Programming Language: Ruby
+
+Windows
+------------
+Before you start using Sass you will need to install Ruby. 
+The fastest way to get Ruby on your Windows computer is to use Ruby Installer. It's a single-click installer that will get everything set up for you super fast.
+The installer will also install a Ruby command line powershell application that will let you use the Ruby libraries.
+
+Installation of Ruby:
+----------------------
+Step(1):Open the link https://www.ruby-lang.org/en/downloads/ and download the setup.exe as per your system requirement
+Step(2): Next, run the setup to install the Ruby on the System
+Step(3): Next, add Ruby bin folder to your PATH User Variable and System Variable to work with gem command. you can also set this varaible at time of installation.
+If not set at time of installation then follow the below steps:
+Path User Variable:
+--Right Click on My Computer.
+--Select Properties.
+--Next, select Advanced tab and click on Environment Variables. 
+--Under Environment Variables window, double click on the PATH.
+--You will get an Edit User Variable box. Add ruby bin folder path in the Variable value field as C:\Ruby\bin. If path is already set for other files then put semicolon after that and add the Ruby folder path. 
+System Variable:
+--Click on New Button.
+--Next, New System Variable block gets displayed.
+--Enter RubyOpt in the Variable name field and rubygems in the Variable value field. After writing the Variable name and value, click on OK button.
+Step(4): Open command prompt in your system and enter the following line.
+if SASS is not sucessfull and getting error related to TCP/IP then set proxy with following command and after that repeat step:4
+SET HTTP_PROXY=http://%USER%:%PASSWORD%@%SERVER%:%PORT%
+set http_proxy=http://one.proxy.att.com:8080
+
+Double-check. You should now have Sass installed, but it never hurts to double-check. In your terminal application you can type:
+sass -v
+
+Starting your first app with SASS:
+------------------------------------
+For creating your first app with SASS, you need to follow with below steps:
+Step1:Create a project folder under root directory of your local server.
+Step2:Create a Html page,css and sass-css folder inside project folder.
+Step3:Create a .scss extention file in your sass-css folder : This folder will keep your all .scss file.
+	  css : folder will be used for actual css code as output
+Step4: Add css file in your html page as normal way like other css files are included.
+	   The name of css file will bed used as output of SASS file.
+Step5: For running your sass file use following command, it will take your preprocessed Sass file and save it as a normal CSS file that you can use in your web site .
+[c:\project_folder> sass sass-css/input.scss css/output.css  ] where input.scss is your sass file and  output.css is your normal css file
+
+For dynamic edit we can set watch on folder/file 
+[c:\project_folder> sass --watch sass-css/input.scss:css/output.css  ] as file
+[c:\project_folder> sass --watch sass-css:css  ] as folder
+
+
+
+
