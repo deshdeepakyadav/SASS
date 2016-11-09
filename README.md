@@ -1,5 +1,5 @@
 # SASS
-SAAS Tutorial
+SAAS Tuotorial
 ---------------
 
 Installation of SASS:
@@ -20,18 +20,31 @@ The installer will also install a Ruby command line powershell application that 
 Installation of Ruby:
 ----------------------
 Step(1):Open the link https://www.ruby-lang.org/en/downloads/ and download the setup.exe as per your system requirement
+
 Step(2): Next, run the setup to install the Ruby on the System
+
 Step(3): Next, add Ruby bin folder to your PATH User Variable and System Variable to work with gem command. you can also set this varaible at time of installation.
+
 If not set at time of installation then follow the below steps:
+
 Path User Variable:
+
 --Right Click on My Computer.
+
 --Select Properties.
+
 --Next, select Advanced tab and click on Environment Variables. 
+
 --Under Environment Variables window, double click on the PATH.
+
 --You will get an Edit User Variable box. Add ruby bin folder path in the Variable value field as C:\Ruby\bin. If path is already set for other files then put semicolon after that and add the Ruby folder path. 
+
 System Variable:
+
 --Click on New Button.
+
 --Next, New System Variable block gets displayed.
+
 --Enter RubyOpt in the Variable name field and rubygems in the Variable value field. After writing the Variable name and value, click on OK button.
 
 
@@ -41,9 +54,9 @@ step(4): Go in Ruby installed folder with cmd and install sass with gem
 if SASS is not sucessfull and getting error related to TCP/IP then set proxy with following command and after that repeat step:4
 
 SET HTTP_PROXY=http://%USER%:%PASSWORD%@%SERVER%:%PORT%
-set http_proxy=http://one.proxy.att.com:8080
 
 if got following error :
+
 ERROR:  Could not find a valid gem 'sass' (>= 0), here is why:
               Unable to download data from https://rubygems.org/ - SSL_connect retur
     ned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (
@@ -99,7 +112,7 @@ booleans (e.g. true, false)
 nulls (e.g. null)
 lists of values, separated by spaces or commas (e.g. 1.5em 1em 0 2em, Helvetica, Arial, sans-serif)
 maps from one value to another (e.g. (key1: value1, key2: value2))
-SassScript also supports all other types of CSS property value, such as Unicode ranges and !important declarations. However, it has no special handling for these types. They’re treated just like unquoted strings.
+SassScript also supports all other types of CSS property value, such as Unicode ranges and !important declarations. However, it has no special handling for these types. Theyâ€™re treated just like unquoted strings.
 
 
 
