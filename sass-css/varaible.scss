@@ -1,7 +1,14 @@
 $font-stack:    Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: #555555;
+$fildsetcolor:#F0F7F3;
+
+@import 'partial/reset';
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+}
+
+fieldset{
+background-color:$fildsetcolor;
 }

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAGA,IAAK;EACH,IAAI,EAAE,0BAAgB;EACtB,KAAK,EAJS,IAAI",
-"sources": ["../sass-css/varaible.scss"],
+"mappings": "AAAA;;;EAGG;EACA,MAAM,EAAE,CAAC;EACV,OAAO,EAAE,CAAC;;ACCZ,IAAK;EACH,IAAI,EAAE,0BAAgB;EACtB,KAAK,EAPS,OAAO;;AAUvB,QAAQ;EACR,gBAAgB,EAVF,OAAO",
+"sources": ["../sass-css/partial/_reset.scss","../sass-css/varaible.scss"],
 "names": [],
 "file": "varaible.css"
 }

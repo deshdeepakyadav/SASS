@@ -4,14 +4,136 @@
 <title> SASS Example</title>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/varaible.css" />
+<link rel="stylesheet" type="text/css" href="css/nesting.css" />
+<link rel="stylesheet" type="text/css" href="css/mixin.css" />
+<link rel="stylesheet" type="text/css" href="css/extended.css" />
+<link rel="stylesheet" type="text/css" href="css/operator.css" />
 </head>
 
 <body>
+<div><h2>Varaible Example:<h2></div>
+<fieldset>
+<legend>SCSS</legend>
+<code>
+$font-stack:    Helvetica, sans-serif; <br/>
+$primary-color: #333;<br/>
 
-<h1>My first SCSS App is here.</h1>
+body {<br/>
+  font: 100% $font-stack;<br/>
+  color: $primary-color;<br/>
+}
+</code>
+</fieldset>
+
+<h2>Nesting Example</h2>
+<fieldset>
+<legend>SCSS</legend>
+<code>
+nav {<br/>
+  ul {<br/>
+    margin: 0;<br/>
+    padding: 0;<br/>
+    list-style: none;<br/>
+  }<br/>
+
+  li { display: inline-block; }<br/>
+
+  a {<br/>
+    display: block;<br/>
+    padding: 6px 12px;<br/>
+    text-decoration: none;<br/>
+  }<br/>
+}<br/>
+</code>
+
+<h3>Output</h3>
+<nav>
+	<ul>
+		<li><a href="#">link 1</a></li>
+		<li><a href="#">link 2</a></li>
+		<li><a href="#">link 3</a></li>
+	</ul>
+</nav>
+</fieldset>
 
 
+<h2>Mixin Example</h2>
+<fieldset>
+<legend>SCSS</legend>
+<code>
+@mixin border-radius($radius) {<br/>
+  -webkit-border-radius: $radius;<br/>
+     -moz-border-radius: $radius;<br/>
+      -ms-border-radius: $radius;<br/>
+          border-radius: $radius;<br/>
+}<br/>
+$widthBox:200px;<br/>
+$heightBox:50px;<br/>
+$bgcolorBox:cyan;<br/>
+.box { @include border-radius(10px);width:$widthBox;height:$heightBox; background-color:$bgcolorBox;}<br/>
+</code>
+<h3>Output</h3>
+<div class="box"></div>
+</fieldset>
 
+<h2>Extend/Inheritance Example</h2>
+<fieldset>
+<legend>SCSS</legend>
+<code>
+.message {<br/>
+  border: 1px solid #ccc;<br/>
+  padding: 10px;<br/>
+  color: #333;<br/>
+}<br/>
+
+.success {<br/>
+  @extend .message;<br/>
+  border-color: green;<br/>
+}<br/>
+
+.error {<br/>
+  @extend .message;<br/>
+  border-color: red;<br/>
+}<br/>
+
+.warning {<br/>
+  @extend .message;<br/>
+  border-color: yellow;<br/>
+}<br/>
+</code>
+<h3>Output</h3>
+
+<div class="message"><h6>This is parent</h6></div>
+<div class="success"><h6>This is Child</h6></div>
+<div class="error"><h6>This is Child</h6></div>
+<div class="warning"><h6>This is Child</h6></div>
+</fieldset>
+
+<h2>Operator Example</h2>
+<fieldset>
+<legend>SCSS</legend>
+<code>
+.container { width: 100%; }<br/>
+
+
+article[role="main"] {<br/>
+  float: left;<br/>
+  width: 600px / 960px * 100%;<br/>
+}<br/>
+
+aside[role="complementary"] {<br/>
+  float: right;<br/>
+  width: 300px / 960px * 100%;<br/>
+}<br/>
+</code>
+<h3>Output</h3>
+
+<div class="container">
+<h6>This is container</h6>
+<article role="main"><h6>This is article</h6></article>
+<aside role="complementary"><h6>This is aside</h6></aside>
+</div>
+</fieldset>
 </body>
 
 </html>

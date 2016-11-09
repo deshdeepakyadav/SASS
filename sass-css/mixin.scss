@@ -1,0 +1,11 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+$widthBox:200px;
+$heightBox:50px;
+$bgcolorBox:cyan;
+
+.box { @include border-radius(10px);width:$widthBox;height:$heightBox; background-color:$bgcolorBox;}

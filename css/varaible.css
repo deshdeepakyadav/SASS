@@ -1,5 +1,15 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
 body {
   font: 100% Helvetica, sans-serif;
-  color: #333; }
+  color: #555555; }
+
+fieldset {
+  background-color: #F0F7F3; }
 
 /*# sourceMappingURL=varaible.css.map */
